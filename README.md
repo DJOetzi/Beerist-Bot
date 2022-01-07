@@ -14,4 +14,4 @@ Invite Beerist to your Server [here](https://top.gg/bot/846722660523180042)!
 7. congrats, you've now compiled your very own build of the Beerist which can be transferred to other machines
 
 ## WARNING
-As of now all of the code has been written rather weak which means once time limitations are come over the bot will undergo heavy changes!
+As of now, the current codebase was built pretty badly in a rather short amount of time. Once I'm able to work more on the bot, expect big changes to happen in short periods of time.
