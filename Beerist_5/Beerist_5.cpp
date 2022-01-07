@@ -136,7 +136,7 @@ int main() {
                     //std::cout << "mem cleared";
                 }
                 else
-                    event.reply(dpp::ir_channel_message_with_source, fmt::format("Error happened at editing `{}`\n**REPORT THIS TO THE DEV IMMEDEATELY**", basetext));
+                    event.reply(dpp::ir_channel_message_with_source, fmt::format("Error happened while editing `{}`\n**REPORT THIS TO THE DEV IMMEDIATELY**", basetext));
                 if (text)
                     free(text);
             }
