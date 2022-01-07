@@ -12,3 +12,6 @@ Invite Beerist to your Server [here](https://top.gg/bot/846722660523180042)!
 5. add all required parameters to baseconfig.json
 6. start up the bot using the local windows debugger or fire up the executable directly
 7. congrats, you've now compiled your very own build of the Beerist which can be transferred to other machines
+
+## WARNING
+As of now all of the code has been written rather weak which means once time limitations are come over the bot will undergo heavy changes!
