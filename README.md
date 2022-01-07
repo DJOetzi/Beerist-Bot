@@ -3,7 +3,7 @@ Entertainment bot for Discord made with D++ - the C++ Discord library
 
 Invite Beerist to your Server [here](https://top.gg/bot/846722660523180042)!
 
-##GUIDE FOR BUILDING AND SELFHOSTING
+## GUIDE FOR BUILDING AND SELFHOSTING
 
 1. clone source using `git clone https://github.com/Progame03/Beerist-Bot.git`
 2. open the project file in visual studio
