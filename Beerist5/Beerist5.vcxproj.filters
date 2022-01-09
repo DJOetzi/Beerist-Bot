@@ -70,5 +70,8 @@
     <ClInclude Include="rps_interactions.hpp">
       <Filter>Headerdateien\button_interactions</Filter>
     </ClInclude>
+    <ClInclude Include="random-fact.hpp">
+      <Filter>Headerdateien\commands</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

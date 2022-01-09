@@ -1,6 +1,7 @@
 #include <ctype.h>
 #include <iostream>
 #include <string.h>
+#include <dpp/nlohmann/json.hpp>
 
 #ifdef _WIN32
 #define popen _popen
@@ -17,6 +18,20 @@ namespace djutils {
     typedef void (*command) (dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link);
     typedef void (*button_interactions) (dpp::cluster& bot, const dpp::button_click_t& event, std::string topgg_link);
 
+    nlohmann::json str_json(std::string str) {
+        nlohmann::json jsonBinary;
+        try
+        {
+            jsonBinary = nlohmann::json::parse(str);
+        }
+        catch (nlohmann::json::parse_error& e)
+        {
+            std::cout << "message: " << e.what() << '\n'
+                << "exception id: " << e.id << '\n'
+                << "byte position of error: " << e.byte << std::endl;
+        }
+        return jsonBinary;
+    }
     std::string str_tolower(std::string str) {
         for (char& c : str)
         {

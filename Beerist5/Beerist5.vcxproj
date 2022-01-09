@@ -156,6 +156,7 @@
     <ClInclude Include="info.hpp" />
     <ClInclude Include="mock.hpp" />
     <ClInclude Include="ping.hpp" />
+    <ClInclude Include="random-fact.hpp" />
     <ClInclude Include="random-meme.hpp" />
     <ClInclude Include="rockpaperscissors.hpp" />
     <ClInclude Include="rps_interactions.hpp" />

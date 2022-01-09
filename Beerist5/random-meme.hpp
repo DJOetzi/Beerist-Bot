@@ -32,16 +32,7 @@ namespace beerist::commands {
                         formatted.std::string::erase(0, rawjson.find('{') - 1);
 
                         json jsonBinary;
-                        try
-                        {
-                            jsonBinary = json::parse(formatted);
-                        }
-                        catch (json::parse_error& e)
-                        {
-                            std::cout << "message: " << e.what() << '\n'
-                                << "exception id: " << e.id << '\n'
-                                << "byte position of error: " << e.byte << std::endl;
-                        }
+                        jsonBinary = djutils::str_json(formatted);
 
                         djutils::redditpost post = {
                             jsonBinary["author"],
@@ -74,7 +65,7 @@ namespace beerist::commands {
                         else {
                             bot.interaction_response_edit(eventtoken, dpp::message().set_content("OOPS!\nYou tried to send a NSFW-Meme in a non-NSFW Channel!\nMake sure your Channel is marked as NSFW to receive such memes!").set_flags(dpp::m_ephemeral));
                         }
-                        });
+                    });
                 }
                 else {
                     bot.interaction_response_edit(eventtokenraw, dpp::message().set_content("OOPS!\nSeems like something went wrong!\nMake sure your Subreddit exists and you spelled it right!").set_flags(dpp::m_ephemeral));

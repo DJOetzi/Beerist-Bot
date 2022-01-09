@@ -33,7 +33,7 @@ namespace beerist::commands {
 				"10th"
 			};
 
-			int lastParam = json::parse(event.raw_event)["d"]["data"]["options"].size();
+			int lastParam = djutils::str_json(event.raw_event)["d"]["data"]["options"].size();
 			for (int i = 0; i < lastParam; i++) {
 				if (djutils::string_contains(std::get<std::string>(event.get_parameter(options[i])), "@everyone") || djutils::string_contains(std::get<std::string>(event.get_parameter(options[i])), "@here")) {
 					valid_options = false;
