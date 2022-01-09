@@ -699,30 +699,31 @@ C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\commandhandler.h(211,27): warnin
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\discord.h(130): message : Siehe Deklaration von "std::vector<std::string,std::allocator<std::string>>"
 C:\Users\maxga\source\repos\Beerist5\Beerist5\ping.hpp(22,23): warning C4244: "Initialisierung": Konvertierung von "double" in "int", möglicher Datenverlust
 C:\Users\maxga\source\repos\Beerist5\Beerist5\ping.hpp(22,66): warning C4244: "Initialisierung": Konvertierung von "double" in "int", möglicher Datenverlust
-C:\Users\maxga\source\repos\Beerist5\Beerist5\Beerist5.cpp(66,19): warning C4244: "Argument": Konvertierung von "time_t" in "unsigned int", möglicher Datenverlust
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\type_traits(1493): message : Siehe Verweis auf die gerade kompilierte Instanziierung "auto main::<lambda_f81305a978af7350b0a14c4b689cfa83>::operator ()<T>(const T &) const" der Funktions-Vorlage.
+C:\Users\maxga\source\repos\Beerist5\Beerist5\choose.hpp(36,79): warning C4267: "Initialisierung": Konvertierung von "size_t" nach "int", Datenverlust möglich
+C:\Users\maxga\source\repos\Beerist5\Beerist5\Beerist5.cpp(67,19): warning C4244: "Argument": Konvertierung von "time_t" in "unsigned int", möglicher Datenverlust
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\type_traits(1493): message : Siehe Verweis auf die gerade kompilierte Instanziierung "auto main::<lambda_000e245229e593a1d61afe514a7a265f>::operator ()<T>(const T &) const" der Funktions-Vorlage.
           with
           [
               T=dpp::ready_t
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\type_traits(1716): message : Siehe Verweis auf die gerade kompilierte Alias Vorlage-Instanziierung "std::_Decltype_invoke_nonzero<main::<lambda_f81305a978af7350b0a14c4b689cfa83>&,const dpp::ready_t&,>".
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\type_traits(1755): message : Siehe Verweis auf die gerade kompilierte Alias Vorlage-Instanziierung "std::_Is_invocable_r_<void,main::<lambda_f81305a978af7350b0a14c4b689cfa83>&,const dpp::ready_t&>".
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\functional(978): message : Siehe Verweis auf die gerade kompilierte Klasse Vorlage-Instanziierung "std::_Is_invocable_r<_Ret,main::<lambda_f81305a978af7350b0a14c4b689cfa83> &,const T &>".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\type_traits(1716): message : Siehe Verweis auf die gerade kompilierte Alias Vorlage-Instanziierung "std::_Decltype_invoke_nonzero<main::<lambda_000e245229e593a1d61afe514a7a265f>&,const dpp::ready_t&,>".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\type_traits(1755): message : Siehe Verweis auf die gerade kompilierte Alias Vorlage-Instanziierung "std::_Is_invocable_r_<void,main::<lambda_000e245229e593a1d61afe514a7a265f>&,const dpp::ready_t&>".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\functional(978): message : Siehe Verweis auf die gerade kompilierte Klasse Vorlage-Instanziierung "std::_Is_invocable_r<_Ret,main::<lambda_000e245229e593a1d61afe514a7a265f> &,const T &>".
           with
           [
               _Ret=void,
               T=dpp::ready_t
           ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\functional(978): message : Weitere Informationen finden Sie in der Referenz zur Kompilierung der Variablenvorlage "const bool conjunction_v<std::negation<std::is_same<<lambda_f81305a978af7350b0a14c4b689cfa83>,std::function<void __cdecl(dpp::ready_t const &)> > >,std::_Is_invocable_r<void,<lambda_f81305a978af7350b0a14c4b689cfa83> &,dpp::ready_t const &> >".
-C:\Users\maxga\source\repos\Beerist5\Beerist5\Beerist5.cpp(66): message : Siehe Verweis auf die gerade kompilierte Alias Vorlage-Instanziierung "std::_Func_class<_Ret,const T &>::_Enable_if_callable_t<main::<lambda_f81305a978af7350b0a14c4b689cfa83>&,std::function<void (const T &)>>".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\functional(978): message : Weitere Informationen finden Sie in der Referenz zur Kompilierung der Variablenvorlage "const bool conjunction_v<std::negation<std::is_same<<lambda_000e245229e593a1d61afe514a7a265f>,std::function<void __cdecl(dpp::ready_t const &)> > >,std::_Is_invocable_r<void,<lambda_000e245229e593a1d61afe514a7a265f> &,dpp::ready_t const &> >".
+C:\Users\maxga\source\repos\Beerist5\Beerist5\Beerist5.cpp(67): message : Siehe Verweis auf die gerade kompilierte Alias Vorlage-Instanziierung "std::_Func_class<_Ret,const T &>::_Enable_if_callable_t<main::<lambda_000e245229e593a1d61afe514a7a265f>&,std::function<void (const T &)>>".
           with
           [
               _Ret=void,
               T=dpp::ready_t
           ]
   Code wird generiert.
-  213 of 3449 functions ( 6.2%) were compiled, the rest were copied from previous compilation.
-    212 functions were new in current compilation
-    13 functions had inline decision re-evaluated but remain unchanged
+  121 of 3584 functions ( 3.4%) were compiled, the rest were copied from previous compilation.
+    118 functions were new in current compilation
+    244 functions had inline decision re-evaluated but remain unchanged
   Codegenerierung ist abgeschlossen.
   Beerist5.vcxproj -> C:\Users\maxga\source\repos\Beerist5\x64\Release\Beerist5.exe

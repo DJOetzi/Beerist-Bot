@@ -61,5 +61,14 @@
     <ClInclude Include="8-ball.hpp">
       <Filter>Headerdateien\commands</Filter>
     </ClInclude>
+    <ClInclude Include="choose.hpp">
+      <Filter>Headerdateien\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="info.hpp">
+      <Filter>Headerdateien\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="rps_interactions.hpp">
+      <Filter>Headerdateien\button_interactions</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

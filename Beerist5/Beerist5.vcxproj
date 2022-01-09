@@ -150,12 +150,15 @@
   <ItemGroup>
     <ClInclude Include="8-ball.hpp" />
     <ClInclude Include="beerist.hpp" />
+    <ClInclude Include="choose.hpp" />
     <ClInclude Include="chromosome_counter.hpp" />
     <ClInclude Include="djutils.hpp" />
+    <ClInclude Include="info.hpp" />
     <ClInclude Include="mock.hpp" />
     <ClInclude Include="ping.hpp" />
     <ClInclude Include="random-meme.hpp" />
     <ClInclude Include="rockpaperscissors.hpp" />
+    <ClInclude Include="rps_interactions.hpp" />
     <ClInclude Include="set_bot_game.hpp" />
     <ClInclude Include="urbandict.hpp" />
   </ItemGroup>

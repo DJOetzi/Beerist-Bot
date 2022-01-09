@@ -15,6 +15,7 @@ namespace djutils {
     }redditpost;
 
     typedef void (*command) (dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link);
+    typedef void (*button_interactions) (dpp::cluster& bot, const dpp::button_click_t& event, std::string topgg_link);
 
     std::string str_tolower(std::string str) {
         for (char& c : str)
