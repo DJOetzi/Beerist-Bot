@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# misc
+Beerist5/data/setup/baseconfig.json
+
