@@ -73,5 +73,8 @@
     <ClInclude Include="random-fact.hpp">
       <Filter>Headerdateien\commands</Filter>
     </ClInclude>
+    <ClInclude Include="joke.hpp">
+      <Filter>Headerdateien\commands</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

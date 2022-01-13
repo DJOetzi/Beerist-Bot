@@ -31,6 +31,7 @@
 #include "choose.hpp"
 #include "info.hpp"
 #include "random-fact.hpp"
+#include "joke.hpp"
 #pragma endregion
 
 #pragma region button interactions
@@ -149,6 +150,9 @@ int main() {
             .set_application_id(bot.me.id),
             dpp::slashcommand().set_name("random-fact")
             .set_description("Beerist spittin' da random facts")
+            .set_application_id(bot.me.id),
+            dpp::slashcommand().set_name("joke")
+            .set_description("let the Beerist tell you a joke")
             .set_application_id(bot.me.id)
         };
 
@@ -177,7 +181,8 @@ int main() {
                 {"8-ball", beerist::commands::_8ball::exec},
                 {"choose", beerist::commands::choose::exec},
                 {"info", beerist::commands::info::exec},
-                {"random-fact", beerist::commands::randomfact::exec}
+                {"random-fact", beerist::commands::randomfact::exec},
+                {"joke", beerist::commands::joke::exec}
             };
             command_table[cmd_data.name](bot, event, cmd_data, bot_link);
         }

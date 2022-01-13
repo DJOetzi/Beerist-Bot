@@ -24,7 +24,7 @@ namespace beerist::commands {
 				std::string foutput = output;
 				foutput.std::string::erase(0, output.find('{') - 1);
 				//std::cout << foutput;
-				nlohmann::json jsonBinary = djutils::str_json(foutput);;
+				nlohmann::json jsonBinary = djutils::str_json(foutput);
 
 				dpp::embed embed = dpp::embed().
 					set_color(0xFFFF00).

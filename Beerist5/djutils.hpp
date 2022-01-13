@@ -49,6 +49,11 @@ namespace djutils {
     bool string_contains(std::string s1, std::string s2) {
         return s1.find(s2) != std::string::npos;
     }
+    std::string format_curl_output(std::string output) {
+        std::string foutput = output;
+        foutput.std::string::erase(0, output.find('{') - 1);
+        return foutput;
+    }
 
     std::string exec_cmd_blocking(std::string command) {
         char buffer[128];

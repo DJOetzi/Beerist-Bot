@@ -154,6 +154,7 @@
     <ClInclude Include="chromosome_counter.hpp" />
     <ClInclude Include="djutils.hpp" />
     <ClInclude Include="info.hpp" />
+    <ClInclude Include="joke.hpp" />
     <ClInclude Include="mock.hpp" />
     <ClInclude Include="ping.hpp" />
     <ClInclude Include="random-fact.hpp" />
