@@ -34,9 +34,7 @@ namespace beerist::commands {
 					add_field("did you know...", jsonBinary["text"]).
 					set_footer(dpp::embed_footer().set_text(u8"straight up facts").set_icon(bot.me.get_avatar_url())).
 					set_timestamp(time(NULL));
-				std::string response = "straightup facts";
-				bot.message_create(dpp::message(channelid, embed));
-				bot.interaction_response_edit(eventtokenraw, response);
+				bot.interaction_response_edit(eventtokenraw, dpp::message(channelid, embed));
 			});
 		}
 	}

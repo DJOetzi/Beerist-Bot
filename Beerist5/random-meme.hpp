@@ -44,7 +44,6 @@ namespace beerist::commands {
                             jsonBinary["ups"]
                         };
 
-                        std::string response = "enjoy your meme";
                         dpp::embed embed = dpp::embed().
                             set_color(0xFFFF00).
                             set_title(post.title).
@@ -55,12 +54,10 @@ namespace beerist::commands {
                             set_timestamp(time(NULL));
 
                         if (!post.nsfw) {
-                            bot.interaction_response_edit(eventtoken, response);
-                            bot.message_create(dpp::message(channel_id, embed));
+                            bot.interaction_response_edit(eventtoken, dpp::message(channel_id, embed));
                         }
                         else if (std::get<dpp::channel>(channelcallback.value).is_nsfw() && post.nsfw) {
-                            bot.interaction_response_edit(eventtoken, response);
-                            bot.message_create(dpp::message(channel_id, embed));
+                            bot.interaction_response_edit(eventtoken, dpp::message(channel_id, embed));
                         }
                         else {
                             bot.interaction_response_edit(eventtoken, dpp::message().set_content("OOPS!\nYou tried to send a NSFW-Meme in a non-NSFW Channel!\nMake sure your Channel is marked as NSFW to receive such memes!").set_flags(dpp::m_ephemeral));

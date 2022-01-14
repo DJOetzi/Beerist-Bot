@@ -28,8 +28,7 @@ namespace beerist::commands{
                 set_footer(dpp::embed_footer().set_text("an epic image of the Beerist because you asked so kindly").set_icon(event.command.member.get_avatar_url())).
                 set_timestamp(time(NULL));
 
-            bot.message_create(dpp::message(event.command.channel_id, embed).set_reference(event.command.id));
-            event.reply(dpp::ir_channel_message_with_source, "enjoy");
+            event.reply(dpp::ir_channel_message_with_source, dpp::message(event.command.channel_id, embed));
 		}
 	}
 }

@@ -32,8 +32,7 @@ namespace beerist::commands {
 					add_field("CREDITS:", fmt::format("**{}**", foutput)).
 					set_footer(dpp::embed_footer().set_text(u8"huge thanks to all people making the bot what it is 💖").set_icon(bot.me.get_avatar_url())).
 					set_timestamp(time(NULL));
-				bot.message_create(dpp::message(channelid, embed));
-				bot.interaction_response_edit(eventtokenraw, dpp::message().set_content(u8"᲼"));
+				bot.interaction_response_edit(eventtokenraw, dpp::message(channelid, embed));
 			});
 		}
 	}

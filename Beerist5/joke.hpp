@@ -39,8 +39,7 @@ namespace beerist::commands {
 					add_field(fmt::format("Category: {}", jsonBinary["category"]), joke).
 					set_footer(dpp::embed_footer().set_text(u8"funni innit").set_icon("https://cdn.discordapp.com/emojis/874721784816087100.webp?size=96&quality=lossless")).
 					set_timestamp(time(NULL));
-				bot.interaction_response_edit(eventtokenraw, dpp::message().set_content("enjoy"));
-				bot.message_create(dpp::message(channelid, embed));
+				bot.interaction_response_edit(eventtokenraw, dpp::message(channelid, embed));
 			});
 		}
 	}
