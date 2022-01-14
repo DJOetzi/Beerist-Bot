@@ -153,10 +153,12 @@
     <ClInclude Include="choose.hpp" />
     <ClInclude Include="chromosome_counter.hpp" />
     <ClInclude Include="djutils.hpp" />
+    <ClInclude Include="howgay.hpp" />
     <ClInclude Include="info.hpp" />
     <ClInclude Include="joke.hpp" />
     <ClInclude Include="mock.hpp" />
     <ClInclude Include="ping.hpp" />
+    <ClInclude Include="pp-size.hpp" />
     <ClInclude Include="random-fact.hpp" />
     <ClInclude Include="random-meme.hpp" />
     <ClInclude Include="rockpaperscissors.hpp" />

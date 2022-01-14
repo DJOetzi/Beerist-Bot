@@ -72,4 +72,9 @@ namespace djutils {
         pclose(pipe);
         return result;
     }
+
+    int map_value(int value, int fromLow, int fromHigh, int toLow, int toHigh)
+    {
+        return (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
+    }
 }

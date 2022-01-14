@@ -76,5 +76,11 @@
     <ClInclude Include="joke.hpp">
       <Filter>Headerdateien\commands</Filter>
     </ClInclude>
+    <ClInclude Include="pp-size.hpp">
+      <Filter>Headerdateien\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="howgay.hpp">
+      <Filter>Headerdateien\commands</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

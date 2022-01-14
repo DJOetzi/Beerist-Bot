@@ -32,6 +32,8 @@
 #include "info.hpp"
 #include "random-fact.hpp"
 #include "joke.hpp"
+#include "pp-size.hpp"
+#include "howgay.hpp"
 #pragma endregion
 
 #pragma region button interactions
@@ -153,6 +155,12 @@ int main() {
             .set_application_id(bot.me.id),
             dpp::slashcommand().set_name("joke")
             .set_description("let the Beerist tell you a joke")
+            .set_application_id(bot.me.id),
+            dpp::slashcommand().set_name("pp-size")
+            .set_description("Let the Beerist check your PP-Size")
+            .set_application_id(bot.me.id),
+            dpp::slashcommand().set_name("how-gay")
+            .set_description("Let the Beerist check how gay you are")
             .set_application_id(bot.me.id)
         };
 
@@ -182,7 +190,9 @@ int main() {
                 {"choose", beerist::commands::choose::exec},
                 {"info", beerist::commands::info::exec},
                 {"random-fact", beerist::commands::randomfact::exec},
-                {"joke", beerist::commands::joke::exec}
+                {"joke", beerist::commands::joke::exec},
+                {"pp-size", beerist::commands::ppsize::exec},
+                {"how-gay", beerist::commands::howgay::exec}
             };
             command_table[cmd_data.name](bot, event, cmd_data, bot_link);
         }
