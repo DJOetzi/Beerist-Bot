@@ -73,7 +73,7 @@ int main() {
 
         #pragma region presetup
         std::cout << fmt::format("Logged in as {}!\n", bot.me.username);
-        bot.set_presence(dpp::presence(dpp::ps_idle, dpp::at_custom, "Beerist5 in the works!"));
+        bot.set_presence(dpp::presence(dpp::ps_online, dpp::at_custom, "ur mom"));
         #pragma endregion
 
         #pragma region slash command setup
