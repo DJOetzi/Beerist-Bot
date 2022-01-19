@@ -33,16 +33,12 @@ namespace beerist::commands {
 				"10th"
 			};
 
-			int lastParam = djutils::str_json(event.raw_event)["d"]["data"]["options"].size();
-			for (int i = 0; i < lastParam; i++) {
-				if (djutils::string_contains(std::get<std::string>(event.get_parameter(options[i])), "@everyone") || djutils::string_contains(std::get<std::string>(event.get_parameter(options[i])), "@here")) {
-					valid_options = false;
-				}
-			}
-			if (valid_options)
-				event.reply(dpp::ir_channel_message_with_source, dpp::message().set_content(fmt::format("I chose: **{}**!", std::get<std::string>(event.get_parameter(options[rand() % lastParam])))));
+			nlohmann::json optiondmp = djutils::str_json(event.raw_event)["d"]["data"]["options"];
+			std::string result = std::get<std::string>(event.get_parameter(optiondmp[rand() % optiondmp.size()]["name"]));
+			if (djutils::string_contains(result, "@everyone") || djutils::string_contains(result, "@here"))
+				event.reply(dpp::ir_channel_message_with_source, dpp::message().set_content(fmt::format("I chose: **{}**!", result)));
 			else
-				event.reply(dpp::ir_channel_message_with_source, dpp::message().set_content("Annoying other People and trying to exploit Bots isn't nice :(").set_flags(dpp::m_ephemeral));
+				event.reply(dpp::ir_channel_message_with_source, dpp::message().set_content("I chose: **You are trying to exploit bots!**").set_flags(dpp::m_ephemeral));
 		}
 	}
 }
