@@ -8,6 +8,9 @@
 #define pclose _pclose
 #endif
 
+#define CMD_HEAD void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link)
+#define INTERACTION_HEAD void exec(dpp::cluster& bot, const dpp::button_click_t& event, std::string topgg_link)
+
 namespace djutils {
     typedef struct {
         std::string author, title, url, link, sub;

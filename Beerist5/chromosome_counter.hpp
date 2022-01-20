@@ -18,7 +18,7 @@
 
 namespace beerist::commands {
 	namespace chromosome_counter {
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
             short chromosome_count = (rand() % 7) + 45; //45 is the lowest amount and 51 the highest amount of chromosomes a living being can have
 
             dpp::embed embed = dpp::embed().

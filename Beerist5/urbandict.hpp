@@ -18,7 +18,7 @@
 
 namespace beerist::commands {
 	namespace urbandict {
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
             event.reply(dpp::ir_channel_message_with_source, "processing request...");
             bot.channel_get(event.command.channel_id, [&bot, eventtoken = event.command.token, request = std::get<std::string>(event.get_parameter("to-search"))](const dpp::confirmation_callback_t& channelcallback) {
                 if (std::get<dpp::channel>(channelcallback.value).is_nsfw())

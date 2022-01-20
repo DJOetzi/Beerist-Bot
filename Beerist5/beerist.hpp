@@ -18,7 +18,7 @@
 
 namespace beerist::commands{
 	namespace beerist_cmd {
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
             dpp::embed embed = dpp::embed().
                 set_color(0xFFFF00).
                 set_title("the Beerist").

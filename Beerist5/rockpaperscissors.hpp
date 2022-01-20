@@ -18,7 +18,7 @@
 
 namespace beerist::commands {
 	namespace rockpaperscissors {
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
             event.reply(dpp::ir_channel_message_with_source, dpp::message(event.command.channel_id, "Choose your Weapon!")
                 .add_component(
                     dpp::component()

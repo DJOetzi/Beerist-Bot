@@ -18,7 +18,7 @@
 
 namespace beerist::commands {
 	namespace info {
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
 			event.reply(dpp::ir_channel_message_with_source, "fetching data...");
 			dpp::utility::exec("curl", { "https://raw.githubusercontent.com/Progame03/Beerist-Bot/dev/credits.md" }, [&bot, eventtokenraw = event.command.token, botlink = topgg_link, usrname= event.command.usr.username, avatarurl = event.command.usr.get_avatar_url(), channelid = event.command.channel_id](const std::string& output){
 				std::string foutput = output;

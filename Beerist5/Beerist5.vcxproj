@@ -156,6 +156,7 @@
     <ClInclude Include="howgay.hpp" />
     <ClInclude Include="info.hpp" />
     <ClInclude Include="joke.hpp" />
+    <ClInclude Include="latex.hpp" />
     <ClInclude Include="mock.hpp" />
     <ClInclude Include="ping.hpp" />
     <ClInclude Include="pp-size.hpp" />

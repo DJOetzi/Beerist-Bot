@@ -18,7 +18,7 @@
 
 namespace beerist::commands {
 	namespace choose{
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
 			bool valid_options = true;
 			std::vector<std::string> options{
 				"1st",

@@ -448,9 +448,9 @@ C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\sslclient.h(40): message : Siehe
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\sslclient.h(125,20): warning C4251: "dpp::ssl_client::custom_writeable_fd": class "std::function<dpp::socket (void)>" erfordert eine DLL-Schnittstelle, die von Clients von class "dpp::ssl_client" verwendet wird
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\sslclient.h(40): message : Siehe Deklaration von "std::function<dpp::socket (void)>"
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\sslclient.h(130,24): warning C4251: "dpp::ssl_client::custom_readable_ready": class "std::function<void (void)>" erfordert eine DLL-Schnittstelle, die von Clients von class "dpp::ssl_client" verwendet wird
-C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\sslclient.h(45): message : Siehe Deklaration von "std::function<void (void)>"
+C:\vcpkg\installed\x64-windows\include\spdlog\details\periodic_worker.h(23): message : Siehe Deklaration von "std::function<void (void)>"
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\sslclient.h(135,24): warning C4251: "dpp::ssl_client::custom_writeable_ready": class "std::function<void (void)>" erfordert eine DLL-Schnittstelle, die von Clients von class "dpp::ssl_client" verwendet wird
-C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\sslclient.h(45): message : Siehe Deklaration von "std::function<void (void)>"
+C:\vcpkg\installed\x64-windows\include\spdlog\details\periodic_worker.h(23): message : Siehe Deklaration von "std::function<void (void)>"
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\wsclient.h(73,14): warning C4251: "dpp::websocket_client::key": class "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" erfordert eine DLL-Schnittstelle, die von Clients von class "dpp::websocket_client" verwendet wird
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : Siehe Deklaration von "std::basic_string<char,std::char_traits<char>,std::allocator<char>>"
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\wsclient.h(79,14): warning C4251: "dpp::websocket_client::path": class "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" erfordert eine DLL-Schnittstelle, die von Clients von class "dpp::websocket_client" verwendet wird
@@ -458,9 +458,9 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\wsclient.h(85,37): warning C4251: "dpp::websocket_client::HTTPHeaders": class "std::map<std::string,std::string,std::less<std::string>,std::allocator<std::pair<const std::string,std::string>>>" erfordert eine DLL-Schnittstelle, die von Clients von class "dpp::websocket_client" verwendet wird
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\queues.h(82): message : Siehe Deklaration von "std::map<std::string,std::string,std::less<std::string>,std::allocator<std::pair<const std::string,std::string>>>"
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\timer.h(61,19): warning C4251: "dpp::timer_t::on_tick": class "std::function<void (void)>" erfordert eine DLL-Schnittstelle, die von Clients von struct "dpp::timer_t" verwendet wird
-C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\sslclient.h(45): message : Siehe Deklaration von "std::function<void (void)>"
+C:\vcpkg\installed\x64-windows\include\spdlog\details\periodic_worker.h(23): message : Siehe Deklaration von "std::function<void (void)>"
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\timer.h(65,19): warning C4251: "dpp::timer_t::on_stop": class "std::function<void (void)>" erfordert eine DLL-Schnittstelle, die von Clients von struct "dpp::timer_t" verwendet wird
-C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\sslclient.h(45): message : Siehe Deklaration von "std::function<void (void)>"
+C:\vcpkg\installed\x64-windows\include\spdlog\details\periodic_worker.h(23): message : Siehe Deklaration von "std::function<void (void)>"
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\cluster.h(54,14): warning C4251: "dpp::gateway::url": class "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" erfordert eine DLL-Schnittstelle, die von Clients von struct "dpp::gateway" verwendet wird
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\xstring(4905): message : Siehe Deklaration von "std::basic_string<char,std::char_traits<char>,std::allocator<char>>"
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\cluster.h(148,14): warning C4251: "dpp::error_detail::object": class "std::basic_string<char,std::char_traits<char>,std::allocator<char>>" erfordert eine DLL-Schnittstelle, die von Clients von struct "dpp::error_detail" verwendet wird
@@ -699,7 +699,7 @@ C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\commandhandler.h(211,27): warnin
 C:\libs\libdpp-9.0.16-win64\include\dpp-9.0\dpp\discord.h(130): message : Siehe Deklaration von "std::vector<std::string,std::allocator<std::string>>"
 C:\Users\maxga\source\repos\Beerist5\Beerist5\ping.hpp(22,23): warning C4244: "Initialisierung": Konvertierung von "double" in "int", möglicher Datenverlust
 C:\Users\maxga\source\repos\Beerist5\Beerist5\ping.hpp(22,66): warning C4244: "Initialisierung": Konvertierung von "double" in "int", möglicher Datenverlust
-C:\Users\maxga\source\repos\Beerist5\Beerist5\Beerist5.cpp(71,19): warning C4244: "Argument": Konvertierung von "time_t" in "unsigned int", möglicher Datenverlust
+C:\Users\maxga\source\repos\Beerist5\Beerist5\Beerist5.cpp(117,19): warning C4244: "Argument": Konvertierung von "time_t" in "unsigned int", möglicher Datenverlust
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\type_traits(1493): message : Siehe Verweis auf die gerade kompilierte Instanziierung "auto main::<lambda_887b53c0ad7debb069319214f9dd4fbc>::operator ()<T>(const T &) const" der Funktions-Vorlage.
           with
           [
@@ -714,15 +714,15 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
               T=dpp::ready_t
           ]
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\functional(978): message : Weitere Informationen finden Sie in der Referenz zur Kompilierung der Variablenvorlage "const bool conjunction_v<std::negation<std::is_same<<lambda_887b53c0ad7debb069319214f9dd4fbc>,std::function<void __cdecl(dpp::ready_t const &)> > >,std::_Is_invocable_r<void,<lambda_887b53c0ad7debb069319214f9dd4fbc> &,dpp::ready_t const &> >".
-C:\Users\maxga\source\repos\Beerist5\Beerist5\Beerist5.cpp(71): message : Siehe Verweis auf die gerade kompilierte Alias Vorlage-Instanziierung "std::_Func_class<_Ret,const T &>::_Enable_if_callable_t<main::<lambda_887b53c0ad7debb069319214f9dd4fbc>&,std::function<void (const T &)>>".
+C:\Users\maxga\source\repos\Beerist5\Beerist5\Beerist5.cpp(117): message : Siehe Verweis auf die gerade kompilierte Alias Vorlage-Instanziierung "std::_Func_class<_Ret,const T &>::_Enable_if_callable_t<main::<lambda_887b53c0ad7debb069319214f9dd4fbc>&,std::function<void (const T &)>>".
           with
           [
               _Ret=void,
               T=dpp::ready_t
           ]
   Code wird generiert.
-  121 of 3899 functions ( 3.1%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    253 functions had inline decision re-evaluated but remain unchanged
+  4031 of 6665 functions (60.5%) were compiled, the rest were copied from previous compilation.
+    3831 functions were new in current compilation
+    616 functions had inline decision re-evaluated but remain unchanged
   Codegenerierung ist abgeschlossen.
   Beerist5.vcxproj -> C:\Users\maxga\source\repos\Beerist5\x64\Release\Beerist5.exe

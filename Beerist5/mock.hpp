@@ -18,7 +18,7 @@
 
 namespace beerist::commands {
 	namespace mock {
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
             std::string text = std::get<std::string>(event.get_parameter("to-mock"));
             int idx = 0;
             for (char& chr : text) {

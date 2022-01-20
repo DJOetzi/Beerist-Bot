@@ -18,7 +18,7 @@
 
 namespace beerist::commands {
 	namespace _8ball {
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
             std::vector<std::string> answers{
                         "maybe:tm:",
                         "yea",

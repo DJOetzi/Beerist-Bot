@@ -18,7 +18,7 @@
 
 namespace beerist::commands {
 	namespace randomfact {
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
 			event.reply(dpp::ir_channel_message_with_source, "fetching data...");
 			dpp::utility::exec("curl", { "https://uselessfacts.jsph.pl/random.json?language=en" }, [&bot, channelid = event.command.channel_id, eventtokenraw = event.command.token, usrname = event.command.usr.username, usravatar = event.command.usr.get_avatar_url(), botlink = topgg_link](const std::string& output){
 				std::string foutput = output;

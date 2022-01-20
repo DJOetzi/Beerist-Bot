@@ -19,7 +19,7 @@
 
 namespace beerist::commands {
 	namespace howgay {
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
 			int howGayPercent = djutils::map_value((rand()%100)+1, 0, 99, 0, 100);
 
 			dpp::embed embed = dpp::embed().

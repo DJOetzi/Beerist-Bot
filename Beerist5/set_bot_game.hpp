@@ -18,7 +18,7 @@
 
 namespace beerist::commands {
 	namespace set_bot_game {
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
 			event.reply(dpp::ir_channel_message_with_source, "```DEPRECATED FEATURE```");
 		}
 	}

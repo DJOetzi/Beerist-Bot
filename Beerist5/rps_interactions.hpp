@@ -48,7 +48,7 @@ namespace beerist::button_interactions {
             return -1;
         }
 
-		void exec(dpp::cluster& bot, const dpp::button_click_t& event, std::string topgg_link) {
+		INTERACTION_HEAD {
             dpp::message msgobj;
             short botchoice = rand() % 3;
             std::string choices[] =

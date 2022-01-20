@@ -18,7 +18,7 @@
 
 namespace beerist::commands {
 	namespace ping {
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
             int gping = event.from->websocket_ping * 1000, rping = bot.rest_ping * 1000;
 
             dpp::embed embed = dpp::embed().

@@ -18,7 +18,7 @@
 
 namespace beerist::commands {
 	namespace randommeme {
-		void exec(dpp::cluster& bot, const dpp::interaction_create_t& event, dpp::command_interaction cmd_data, std::string topgg_link) {
+		CMD_HEAD {
             event.reply(dpp::ir_channel_message_with_source, "Fetching your meme...");
             std::string sub;
 

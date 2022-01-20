@@ -82,5 +82,8 @@
     <ClInclude Include="howgay.hpp">
       <Filter>Headerdateien\commands</Filter>
     </ClInclude>
+    <ClInclude Include="latex.hpp">
+      <Filter>Headerdateien\commands</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
