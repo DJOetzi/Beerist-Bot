@@ -1,4 +1,4 @@
 # the Beerist
-### Beerist5 created and maintained by DJ::Ötzi and its contributors!
-- Version: Beerist5 rev. 3
-- DPP-Version: 9.0.16
+### Beerist6 created and maintained by DJ::Ötzi and its contributors!
+- Version: Beerist6 SNAPSHOT-1
+- Discord4J Version: 3.2.1
