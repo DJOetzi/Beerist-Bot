@@ -1,0 +1,12 @@
+{
+  "name": "8-ball",
+  "description": "Ask the Beerist a question and he'll give you an yes/no answer!",
+  "options": [
+    {
+      "name": "question",
+      "description": "The Question you want to ask the Beerist",
+      "type": 3,
+      "required": true
+    }
+  ]
+}

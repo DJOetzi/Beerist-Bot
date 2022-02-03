@@ -60,12 +60,19 @@ public class Main {
 
             Mono<Void> onInteractionEvent = gateway.on(ChatInputInteractionEvent.class, event ->
                     switch (event.getCommandName()) {
-                        case "info" -> info.exec(event);
+                        case "info" -> info.exec(event, is_debug);
                         case "mock" -> mock.exec(event);
                         case "beerist" -> beerist.exec(event);
                         case "set-bot-game" -> setbotgame.exec(event);
                         case "chromosome-counter" -> chromosome_counter.exec(event, rand);
                         case "rock-paper-scissors" -> rockpaperscissors.exec(event);
+                        case "urbandict" -> urbandict.exec(event);
+                        case "random-meme" -> randommeme.exec(event);
+                        case "8-ball" -> _8ball.exec(event, rand);
+                        case "choose" -> choose.exec(event, rand);
+                        case "credits" -> credits.exec(event);
+                        case "random-fact" -> randomfact.exec(event);
+                        case "joke" -> joke.exec(event);
                         default -> Mono.empty();
                     }
             ).then();

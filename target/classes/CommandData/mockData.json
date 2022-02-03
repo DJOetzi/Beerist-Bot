@@ -3,7 +3,7 @@
   "description": "mock dumb things your friends say",
   "options": [
     {
-      "name": "name",
+      "name": "to-mock",
       "description": "mock dumb things your friends say",
       "type": 3,
       "required": true
