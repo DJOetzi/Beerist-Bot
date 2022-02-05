@@ -1,14 +1,9 @@
 package utils;
 
-import reactor.core.publisher.Mono;
-
-import java.io.IOException;
-import java.net.URI;
-import java.net.http.HttpClient;
-import java.net.http.HttpRequest;
-import java.net.http.HttpResponse;
-import java.util.Objects;
+import java.util.List;
 
 public class genericUtils {
-
+    public static String characterListToString(List<Character> characterList){
+        return characterList.toString().replace("[", "").replace(",","").replace("]", "").replace(" ", "");
+    }
 }

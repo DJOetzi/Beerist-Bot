@@ -25,13 +25,14 @@ public class Main {
     public static Random rand = new Random();
 
     public static void main(String[] args) throws Exception{
-        config = new Gson().fromJson(getResourceFileAsString("config.json"), JsonObject.class);
+        config = new Gson().fromJson(getResourceFileAsString("_config.json"), JsonObject.class);
         final boolean is_debug = config.get("is_debug").getAsBoolean();
         final DiscordClient client = DiscordClient.create((is_debug)?config.get("debug_token").getAsString():config.get("token").getAsString());
         long applicationId=client.getApplicationId().block(), guildId = config.get("debug_guild").getAsLong();
 
         //region commands
-        ApplicationCommandRequest[] commands = commandLoaderFromResources("CommandData/");
+        JsonObject commandRegistry = new Gson().fromJson(getResourceFileAsString("commandRegistry.json"), JsonObject.class);
+        ApplicationCommandRequest[] commands = commandLoaderFromResources("CommandData/", commandRegistry.get("commands").getAsJsonArray());
         //endregion
 
         //region register commands
@@ -73,6 +74,8 @@ public class Main {
                         case "credits" -> credits.exec(event);
                         case "random-fact" -> randomfact.exec(event);
                         case "joke" -> joke.exec(event);
+                        case "pp-size" -> ppsize.exec(event, rand);
+                        case "how-gay" -> howgay.exec(event, rand);
                         default -> Mono.empty();
                     }
             ).then();

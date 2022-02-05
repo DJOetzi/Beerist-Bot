@@ -27,8 +27,8 @@ public class randommeme {
             String sub = event.getOption("subreddit")
                     .flatMap(ApplicationCommandInteractionOption::getValue)
                     .map(ApplicationCommandInteractionOptionValue::asString)
-                    .orElse("error");
-            URI uri = URI.create((event.getOptions().size()>0)? String.format("https://meme-api.herokuapp.com/gimme/%s", sub):"https://meme-api.herokuapp.com/gimme");
+                    .orElse("memes");
+            URI uri = URI.create(String.format("https://meme-api.herokuapp.com/gimme/%s", sub));
             HttpRequest request = HttpRequest.newBuilder(uri).build();
             String content = null;
             try {

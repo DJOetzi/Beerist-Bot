@@ -1,12 +1,13 @@
 package utils;
 
+import com.google.gson.JsonArray;
 import discord4j.common.JacksonResources;
 import discord4j.discordjson.json.ApplicationCommandRequest;
 
-import java.io.File;
 import java.io.IOException;
 
-import static utils.fileUtils.*;
+import static utils.fileUtils.getResourceFileAsString;
+import static utils.fileUtils.readFileAsString;
 
 public class slashUtils {
     public static ApplicationCommandRequest buildSlashCommand(String jsonData) throws IOException {
@@ -15,11 +16,10 @@ public class slashUtils {
     public static ApplicationCommandRequest buildSlashCommandFromResource(String filePath) throws IOException{
         return buildSlashCommand(getResourceFileAsString(filePath));
     }
-    public static ApplicationCommandRequest[] commandLoaderFromResources(String path) throws IOException {
-        File[] commandData = getResourceFolderFiles(path);
-        ApplicationCommandRequest[] commands = new ApplicationCommandRequest[commandData.length];
-        for(int i=0; i<commandData.length; i++){
-            commands[i] = buildSlashCommand(readFromFile(commandData[i]));
+    public static ApplicationCommandRequest[] commandLoaderFromResources(String path, JsonArray commandRegistry) throws Exception {
+        ApplicationCommandRequest[] commands = new ApplicationCommandRequest[commandRegistry.size()];
+        for(int i=0; i<commandRegistry.size(); i++){
+            commands[i] = buildSlashCommandFromResource(String.format("%s%s", path, commandRegistry.get(i).getAsString()));
         }
         return commands;
     }
