@@ -9,6 +9,8 @@
 
 #include "CommandRegister.h"
 #include "GlobalData.hpp"
+
+#include "MacroUtil.hpp"
 #include "FileUtil.hpp"
 
 auto onBoot00(DiscordCoreAPI::DiscordCoreClient* args) -> DiscordCoreAPI::CoRoutine<void>;
@@ -80,12 +82,16 @@ auto onBoot00(DiscordCoreAPI::DiscordCoreClient* args) -> DiscordCoreAPI::CoRout
         std::this_thread::sleep_for(std::chrono::milliseconds{ 1 });
     }
 
-    std::vector<DiscordCoreAPI::CreateGuildApplicationCommandData> commands;
+    std::vector<DiscordCoreAPI::CreateGuildApplicationCommandData> commands {
+        CM(Ping),
+        CM(Mock),
+        CM(HowGae)
+    };
     std::vector<DiscordCoreAPI::CreateGlobalApplicationCommandData> global_commands;
-    
 
-    commands.emplace_back(Beerist::Commands::Ping::returnData(debug_guild, args->getBotUser().id));
-    commands.emplace_back(Beerist::Commands::Mock::returnData(debug_guild, args->getBotUser().id));
+    CR("ping", Ping, 0);
+    CR("mock", Mock, 1);
+    CR("howgae", HowGae, 2);
 
     DiscordCoreAPI::BulkOverwriteGuildApplicationCommandsData dataPackage;
     dataPackage.responseData = commands;
@@ -95,9 +101,6 @@ auto onBoot00(DiscordCoreAPI::DiscordCoreClient* args) -> DiscordCoreAPI::CoRout
     /*DiscordCoreAPI::BulkOverwriteGlobalApplicationCommandsData dataPackageGlobal;
     dataPackageGlobal.responseData = global_commands;
     dataPackageGlobal.applicationId = args->getBotUser().id;*/
-
-    args->registerFunction(std::vector<std::string>{ "ping" }, std::make_unique<Beerist::Commands::Ping>(), commands[0]);
-    args->registerFunction(std::vector<std::string>{ "mock" }, std::make_unique<Beerist::Commands::Mock>(), commands[1]);
 
     auto ret = DiscordCoreAPI::ApplicationCommands::bulkOverwriteGuildApplicationCommandsAsync(dataPackage).get();
     //auto ret_glob = DiscordCoreAPI::ApplicationCommands::bulkOverwriteGlobalApplicationCommandsAsync(dataPackageGlobal).get();

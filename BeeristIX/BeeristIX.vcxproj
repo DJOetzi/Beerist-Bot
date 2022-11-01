@@ -138,6 +138,7 @@
     <ClInclude Include="FileUtil.hpp" />
     <ClInclude Include="GlobalData.hpp" />
     <ClInclude Include="HowGae.hpp" />
+    <ClInclude Include="MacroUtil.hpp" />
     <ClInclude Include="MathUtil.hpp" />
     <ClInclude Include="Mock.hpp" />
     <ClInclude Include="Ping.hpp" />

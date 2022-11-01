@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include <discordcoreapi/Index.hpp>
+#include <fmt/format.h>
 #include "MathUtil.hpp"
 
 namespace Beerist::Commands
@@ -9,13 +10,8 @@ namespace Beerist::Commands
         HowGae() {
             this->commandName = "howgae";
             this->helpDescription = "Let the beerist check how gay you are!";
-            int val = Utility::File::map_value<int>(rand() % 100 + 1, 1, 100, 0, 100);
 
             DiscordCoreAPI::EmbedData msgEmbed;
-            msgEmbed.setDescription("------\nSimply enter !test or /test!\n------");
-            msgEmbed.setTitle("__**Test Usage:**__");
-            msgEmbed.setTimeStamp(DiscordCoreAPI::getTimeAndDate());
-            msgEmbed.setColor("FeFeFe");
             this->helpEmbed = msgEmbed;
         }
 
@@ -26,7 +22,14 @@ namespace Beerist::Commands
         virtual void execute(DiscordCoreAPI::BaseFunctionArguments& args) {
             DiscordCoreAPI::RespondToInputEventData dataPackage{ args.eventData };
 
-            dataPackage.addMessageEmbed(this->helpEmbed);
+            int val = Utility::File::map_value<float>(rand() % 100, 0, 99, 0, 100);
+            DiscordCoreAPI::EmbedData msgEmbed;
+            msgEmbed.addField(":rainbow_flag:how gae?:rainbow_flag:", fmt::format("you are :rainbow_flag:{}% gay:rainbow_flag:", val));
+            msgEmbed.setTimeStamp(DiscordCoreAPI::getTimeAndDate());
+            msgEmbed.setColor("ffff00");
+            msgEmbed.setFooter("y r u gae?", args.discordCoreClient->getBotUser().getAvatarUrl());
+
+            dataPackage.addMessageEmbed(msgEmbed);
             dataPackage.setResponseType(DiscordCoreAPI::InputEventResponseType::Interaction_Response);
             DiscordCoreAPI::InputEvents::respondToInputEventAsync(dataPackage);
         }

@@ -47,5 +47,8 @@
     <ClInclude Include="GlobalData.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="MacroUtil.hpp">
+      <Filter>Headerdateien\utils</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
