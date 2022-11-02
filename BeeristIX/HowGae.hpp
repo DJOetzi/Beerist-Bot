@@ -22,7 +22,7 @@ namespace Beerist::Commands
         virtual auto execute(DiscordCoreAPI::BaseFunctionArguments& args) -> void {
             DiscordCoreAPI::RespondToInputEventData dataPackage{ args.eventData };
 
-            int val = Utility::File::map_value<float>(rand() % 100, 0, 99, 0, 100);
+            int val = Utility::Math::map_value<float>(std::rand() % 100, 0, 99, 0, 100);
             DiscordCoreAPI::EmbedData msgEmbed;
             msgEmbed.addField(":rainbow_flag:how gae?:rainbow_flag:", fmt::format("you are :rainbow_flag:{}% gay:rainbow_flag:", val));
             msgEmbed.setTimeStamp(DiscordCoreAPI::getTimeAndDate());
@@ -40,7 +40,7 @@ namespace Beerist::Commands
 
             CommandData.guildId = guild;
             CommandData.defaultMemberPermissions = DiscordCoreAPI::Permission::Use_Application_Commands;
-            CommandData.dmPermission = false;
+            CommandData.dmPermission = true;
             CommandData.applicationId = BotUserId;
             CommandData.type = DiscordCoreAPI::ApplicationCommandType::Chat_Input;
             CommandData.description = "Let the beerist check how gay you are!";

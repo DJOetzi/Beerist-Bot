@@ -7,4 +7,4 @@
 #define CR(z, x, y) args->registerFunction(std::vector<std::string>{ z }, CCC(x), commands[y])
 
 // CM - CommandMaker
-#define CM(x) Beerist::Commands::x::returnData(debug_guild, args->getBotUser().id)
+#define CM(x) Beerist::Commands::x::returnData(debugGuild, args->getBotUser().id)

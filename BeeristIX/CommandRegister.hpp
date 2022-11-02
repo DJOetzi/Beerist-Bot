@@ -1,4 +1,5 @@
 ﻿#pragma once
-#include "ping.hpp"
-#include "mock.hpp"
-#include "howgae.hpp"
+#include "Ping.hpp"
+#include "Mock.hpp"
+#include "HowGae.hpp"
+#include "Choose.hpp"

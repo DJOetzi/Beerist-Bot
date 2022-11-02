@@ -16,14 +16,13 @@
 auto onBoot00(DiscordCoreAPI::DiscordCoreClient* args) -> DiscordCoreAPI::CoRoutine<void>;
 auto onGatewayPing(DiscordCoreAPI::OnGatewayPingData args) -> DiscordCoreAPI::CoRoutine<void>;
 
-DiscordCoreAPI::Snowflake debug_guild;
-nlohmann::json conf_doc;
+DiscordCoreAPI::Snowflake debugGuild;
+nlohmann::json confDoc;
 
+//TODO:: fix random stuff
 auto main() -> int
 {
-    srand(time(NULL));
-
-    conf_doc = Utility::File::read_file("./data/config.json");
+    confDoc = Utility::File::read_file("./data/config.json");
 
     std::vector<DiscordCoreAPI::RepeatedFunctionData> functionVector{};
     DiscordCoreAPI::RepeatedFunctionData function01{};
@@ -33,8 +32,8 @@ auto main() -> int
     functionVector.push_back(function01);
 
     DiscordCoreAPI::DiscordCoreClientConfig clientConfig{};
-    clientConfig.botToken = (conf_doc["is_debug"] ? conf_doc["debug_token"] : conf_doc["token"]);
-    debug_guild = DiscordCoreAPI::Snowflake(conf_doc["debug_guild"].get<uint64_t>());
+    clientConfig.botToken = (confDoc["isDebug"] ? confDoc["debugToken"] : confDoc["token"]);
+    debugGuild = DiscordCoreAPI::Snowflake(confDoc["debugGuild"].get<uint64_t>());
 
     DiscordCoreAPI::ShardingOptions shardOptions{};
     shardOptions.numberOfShardsForThisProcess = 1;
@@ -85,13 +84,15 @@ auto onBoot00(DiscordCoreAPI::DiscordCoreClient* args) -> DiscordCoreAPI::CoRout
     std::vector<DiscordCoreAPI::CreateGuildApplicationCommandData> commands {
         CM(Ping),
         CM(Mock),
-        CM(HowGae)
+        CM(HowGae),
+        CM(Choose)
     };
     std::vector<DiscordCoreAPI::CreateGlobalApplicationCommandData> global_commands;
 
     CR("ping", Ping, 0);
     CR("mock", Mock, 1);
     CR("howgae", HowGae, 2);
+    CR("choose", Choose, 3);
 
     DiscordCoreAPI::BulkOverwriteGuildApplicationCommandsData dataPackage;
     dataPackage.responseData = commands;

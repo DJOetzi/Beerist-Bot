@@ -134,6 +134,7 @@
     <ClCompile Include="BeeristIX.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Choose.hpp" />
     <ClInclude Include="CommandRegister.hpp" />
     <ClInclude Include="FileUtil.hpp" />
     <ClInclude Include="GlobalData.hpp" />
@@ -142,6 +143,7 @@
     <ClInclude Include="MathUtil.hpp" />
     <ClInclude Include="Mock.hpp" />
     <ClInclude Include="Ping.hpp" />
+    <ClInclude Include="StringUtil.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

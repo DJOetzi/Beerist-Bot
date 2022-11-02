@@ -42,7 +42,7 @@ namespace Beerist::Commands
 
             CommandData.guildId = guild;
             CommandData.defaultMemberPermissions = DiscordCoreAPI::Permission::Use_Application_Commands;
-            CommandData.dmPermission = false;
+            CommandData.dmPermission = true;
             CommandData.applicationId = BotUserId;
             CommandData.type = DiscordCoreAPI::ApplicationCommandType::Chat_Input;
             CommandData.description = "Mock dumb shit your friends say!";
