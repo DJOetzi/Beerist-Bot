@@ -32,7 +32,7 @@
     <ClInclude Include="Ping.hpp">
       <Filter>Quelldateien\commands</Filter>
     </ClInclude>
-    <ClInclude Include="CommandRegister.h">
+    <ClInclude Include="CommandRegister.hpp">
       <Filter>Quelldateien</Filter>
     </ClInclude>
     <ClInclude Include="Mock.hpp">

@@ -19,11 +19,11 @@ namespace Beerist::Commands {
             this->helpEmbed = msgEmbed;
         }
 
-        std::unique_ptr<DiscordCoreAPI::BaseFunction> create() {
+        auto create() -> std::unique_ptr<DiscordCoreAPI::BaseFunction> {
             return std::make_unique<Ping>();
         }
 
-        virtual void execute(DiscordCoreAPI::BaseFunctionArguments& args) {
+        virtual auto execute(DiscordCoreAPI::BaseFunctionArguments& args) -> void {
             DiscordCoreAPI::RespondToInputEventData dataPackage{ args.eventData };
             dataPackage.addMessageEmbed(this->helpEmbed);
             dataPackage.setResponseType(DiscordCoreAPI::InputEventResponseType::Interaction_Response);

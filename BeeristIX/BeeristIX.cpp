@@ -7,7 +7,7 @@
 #include <discordcoreapi/Index.hpp>
 #include <nlohmann/json.hpp>
 
-#include "CommandRegister.h"
+#include "CommandRegister.hpp"
 #include "GlobalData.hpp"
 
 #include "MacroUtil.hpp"

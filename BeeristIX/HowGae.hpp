@@ -15,11 +15,11 @@ namespace Beerist::Commands
             this->helpEmbed = msgEmbed;
         }
 
-        std::unique_ptr<DiscordCoreAPI::BaseFunction> create() {
+        auto create() -> std::unique_ptr<DiscordCoreAPI::BaseFunction> {
             return std::make_unique<HowGae>();
         }
 
-        virtual void execute(DiscordCoreAPI::BaseFunctionArguments& args) {
+        virtual auto execute(DiscordCoreAPI::BaseFunctionArguments& args) -> void {
             DiscordCoreAPI::RespondToInputEventData dataPackage{ args.eventData };
 
             int val = Utility::File::map_value<float>(rand() % 100, 0, 99, 0, 100);

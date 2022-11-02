@@ -134,7 +134,7 @@
     <ClCompile Include="BeeristIX.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CommandRegister.h" />
+    <ClInclude Include="CommandRegister.hpp" />
     <ClInclude Include="FileUtil.hpp" />
     <ClInclude Include="GlobalData.hpp" />
     <ClInclude Include="HowGae.hpp" />

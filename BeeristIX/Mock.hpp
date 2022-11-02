@@ -10,11 +10,11 @@ namespace Beerist::Commands
             this->helpDescription = "Mock dumb things your friends say!";
         }
 
-        std::unique_ptr<DiscordCoreAPI::BaseFunction> create() {
+        auto create() -> std::unique_ptr<DiscordCoreAPI::BaseFunction> {
             return std::make_unique<Mock>();
         }
 
-        virtual void execute(DiscordCoreAPI::BaseFunctionArguments& args) {
+        virtual auto execute(DiscordCoreAPI::BaseFunctionArguments& args) -> void {
             DiscordCoreAPI::RespondToInputEventData dataPackage{ args.eventData };
 
             std::string text = args.optionsArgs.values["to-mock"].value;
