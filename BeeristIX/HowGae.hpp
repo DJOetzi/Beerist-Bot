@@ -21,8 +21,8 @@ namespace Beerist::Commands
 
         virtual auto execute(DiscordCoreAPI::BaseFunctionArguments& args) -> void {
             DiscordCoreAPI::RespondToInputEventData dataPackage{ args.eventData };
-
-            int val = Utility::Math::map_value<float>(std::rand() % 100, 0, 99, 0, 100);
+            std::uniform_int_distribution<> distr(0, 100);
+            int val = distr(gen);
             DiscordCoreAPI::EmbedData msgEmbed;
             msgEmbed.addField(":rainbow_flag:how gae?:rainbow_flag:", fmt::format("you are :rainbow_flag:{}% gay:rainbow_flag:", val));
             msgEmbed.setTimeStamp(DiscordCoreAPI::getTimeAndDate());

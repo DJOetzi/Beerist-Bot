@@ -20,12 +20,11 @@ namespace Beerist::Commands
         }
 
         virtual auto execute(DiscordCoreAPI::BaseFunctionArguments& args) -> void {
-            DiscordCoreAPI::RespondToInputEventData dataPackage{ args.eventData };
-            int selection = std::rand() % args.optionsArgs.values.size();
-            std::cout << availableOptions.size(); // TODO: Debug Behavior of selection!
-            std::string response = args.optionsArgs.values[availableOptions[selection]].value;
+            std::uniform_int_distribution<> distr(0, args.optionsArgs.values.size()-1);
 
-            response = fmt::format("I choose: **{}**", response);
+            DiscordCoreAPI::RespondToInputEventData dataPackage{ args.eventData };
+            std::string response = fmt::format("I choose: **{}**", args.optionsArgs.values[availableOptions[distr(gen)]].value);
+
             dataPackage.setResponseType(DiscordCoreAPI::InputEventResponseType::Interaction_Response);
 
             if (Utility::String::str_contains(response, "@everyone") || Utility::String::str_contains(response, "@here"))
