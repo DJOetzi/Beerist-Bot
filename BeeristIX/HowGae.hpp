@@ -1,6 +1,8 @@
 ﻿#pragma once
 #include <discordcoreapi/Index.hpp>
 #include <fmt/format.h>
+
+#include "Colors.hpp"
 #include "MathUtil.hpp"
 
 namespace Beerist::Commands
@@ -26,7 +28,7 @@ namespace Beerist::Commands
             DiscordCoreAPI::EmbedData msgEmbed;
             msgEmbed.addField(":rainbow_flag:how gae?:rainbow_flag:", fmt::format("you are :rainbow_flag:{}% gay:rainbow_flag:", val));
             msgEmbed.setTimeStamp(DiscordCoreAPI::getTimeAndDate());
-            msgEmbed.setColor("ffff00");
+            msgEmbed.setColor(DiscordCoreAPI::Colors::MoonYellow);
             msgEmbed.setFooter("y r u gae?", args.discordCoreClient->getBotUser().getAvatarUrl());
 
             dataPackage.addMessageEmbed(msgEmbed);

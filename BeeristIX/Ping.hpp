@@ -2,6 +2,7 @@
 #include <discordcoreapi/Index.hpp>
 #include <fmt/format.h>
 
+#include "Colors.hpp"
 #include "GlobalData.hpp"
 
 namespace Beerist::Commands {
@@ -42,7 +43,7 @@ namespace Beerist::Commands {
             msgEmbed.addField("REST-Ping:", fmt::format("~{}ms", timeCache/2), false); //also account for CoRoutine behavior!
             msgEmbed.addField("Gateway-Ping:", fmt::format("~{}ms", gatewayPing/100), false);
             msgEmbed.setFooter("", args.discordCoreClient->getBotUser().getAvatarUrl());
-            msgEmbed.setColor("f0c420");
+            msgEmbed.setColor(DiscordCoreAPI::Colors::MoonYellow);
 
             DiscordCoreAPI::RespondToInputEventData dataPackage2{ ioData };
             dataPackage2.addMessageEmbed(msgEmbed);

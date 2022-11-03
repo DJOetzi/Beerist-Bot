@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Choose.hpp" />
+    <ClInclude Include="Colors.hpp" />
     <ClInclude Include="CommandRegister.hpp" />
     <ClInclude Include="FileUtil.hpp" />
     <ClInclude Include="GlobalData.hpp" />
@@ -143,6 +144,7 @@
     <ClInclude Include="MathUtil.hpp" />
     <ClInclude Include="Mock.hpp" />
     <ClInclude Include="Ping.hpp" />
+    <ClInclude Include="PPSize.hpp" />
     <ClInclude Include="StringUtil.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

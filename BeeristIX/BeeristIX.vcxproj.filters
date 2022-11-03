@@ -56,5 +56,11 @@
     <ClInclude Include="StringUtil.hpp">
       <Filter>Headerdateien\utils</Filter>
     </ClInclude>
+    <ClInclude Include="PPSize.hpp">
+      <Filter>Quelldateien\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Colors.hpp">
+      <Filter>Headerdateien\utils</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
