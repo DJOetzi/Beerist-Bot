@@ -82,14 +82,13 @@ auto onBoot00(DiscordCoreAPI::DiscordCoreClient* args) -> DiscordCoreAPI::CoRout
     }
 
     std::vector<DiscordCoreAPI::CreateGuildApplicationCommandData> commands{};
-    std::vector<DiscordCoreAPI::CreateGlobalApplicationCommandData> global_commands;
+    std::vector<DiscordCoreAPI::CreateGlobalApplicationCommandData> global_commands{};
 
     CR("ping", Ping, 0);
     CR("mock", Mock, 1);
     CR("howgae", HowGae, 2);
     CR("choose", Choose, 3);
     CR("pp-size", PPSize, 4);
-
 
     DiscordCoreAPI::BulkOverwriteGuildApplicationCommandsData dataPackage;
     dataPackage.responseData = commands;

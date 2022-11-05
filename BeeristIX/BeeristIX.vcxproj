@@ -138,6 +138,7 @@
     <ClInclude Include="ChromosomeCounter.hpp" />
     <ClInclude Include="Colors.hpp" />
     <ClInclude Include="CommandRegister.hpp" />
+    <ClInclude Include="CommandTemplate.hpp" />
     <ClInclude Include="FileUtil.hpp" />
     <ClInclude Include="GlobalData.hpp" />
     <ClInclude Include="HowGae.hpp" />
