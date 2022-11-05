@@ -12,24 +12,23 @@
 
 #include "MacroUtil.hpp"
 #include "FileUtil.hpp"
+#include "DiscordUtil.hpp"
 
 auto onBoot00(DiscordCoreAPI::DiscordCoreClient* args) -> DiscordCoreAPI::CoRoutine<void>;
+
 auto onGatewayPing(DiscordCoreAPI::OnGatewayPingData args) -> DiscordCoreAPI::CoRoutine<void>;
 
 DiscordCoreAPI::Snowflake debugGuild;
 nlohmann::json confDoc;
 
-//TODO:: fix random stuff
+//TODO: presence updates
 auto main() -> int
 {
     confDoc = Utility::File::read_file("./data/config.json");
 
-    std::vector<DiscordCoreAPI::RepeatedFunctionData> functionVector{};
-    DiscordCoreAPI::RepeatedFunctionData function01{};
-    function01.function = &onBoot00;
-    function01.intervalInMs = 100;
-    function01.repeated = false;
-    functionVector.push_back(function01);
+    std::vector<DiscordCoreAPI::RepeatedFunctionData> functionVector{
+        Utility::Discord::repeatedFunctionBuilder(&onBoot00, 100, false),
+    };
 
     DiscordCoreAPI::DiscordCoreClientConfig clientConfig{};
     clientConfig.botToken = (confDoc["isDebug"] ? confDoc["debugToken"] : confDoc["token"]);
@@ -39,6 +38,7 @@ auto main() -> int
     shardOptions.numberOfShardsForThisProcess = 1;
     shardOptions.startingShard = 0;
     shardOptions.totalNumberOfShards = 1;
+
     DiscordCoreAPI::LoggingOptions logOptions{};
     logOptions.logFFMPEGErrorMessages = true;
     logOptions.logGeneralErrorMessages = true;
@@ -52,11 +52,13 @@ auto main() -> int
     clientConfig.intents = DiscordCoreAPI::GatewayIntents::Default_Intents;
     clientConfig.functionsToExecute = functionVector;
 
-    std::vector<DiscordCoreAPI::ActivityData> activities{};
-    DiscordCoreAPI::ActivityData activity{};
-    activity.name = "with ur mom!";
-    activity.type = DiscordCoreAPI::ActivityType::Game;
-    activities.push_back(activity);
+    std::vector<DiscordCoreAPI::ActivityData> activities{
+	    Utility::Discord::buildActivity("with ur mom", DiscordCoreAPI::ActivityType::Game),
+        Utility::Discord::buildActivity("u taking a crap", DiscordCoreAPI::ActivityType::Watching),
+        Utility::Discord::buildActivity("on LiveLeak", DiscordCoreAPI::ActivityType::Streaming),
+        Utility::Discord::buildActivity("with Allah", DiscordCoreAPI::ActivityType::Competing),
+        Utility::Discord::buildActivity("to pastafarian poetry", DiscordCoreAPI::ActivityType::Listening),
+    };
 
     clientConfig.presenceData.activities = activities;
     clientConfig.presenceData.afk = false;
@@ -75,6 +77,7 @@ auto main() -> int
 auto onBoot00(DiscordCoreAPI::DiscordCoreClient* args) -> DiscordCoreAPI::CoRoutine<void>
 {
     co_await DiscordCoreAPI::NewThreadAwaitable<void>();
+
     std::cout << "registering commands..." << std::endl;
 
     while (args->getBotUser().id == 0) {
@@ -89,6 +92,7 @@ auto onBoot00(DiscordCoreAPI::DiscordCoreClient* args) -> DiscordCoreAPI::CoRout
     CR("howgae", HowGae, 2);
     CR("choose", Choose, 3);
     CR("pp-size", PPSize, 4);
+    CR("chromosome-counter", ChromosomeCounter, 5);
 
     DiscordCoreAPI::BulkOverwriteGuildApplicationCommandsData dataPackage;
     dataPackage.responseData = commands;

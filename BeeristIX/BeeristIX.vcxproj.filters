@@ -16,7 +16,7 @@
     <Filter Include="Headerdateien\utils">
       <UniqueIdentifier>{c6bd7469-fbd8-424a-a737-9a3bff6c5e3e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Quelldateien\commands">
+    <Filter Include="Headerdateien\commands">
       <UniqueIdentifier>{6d573dfa-b60c-4767-889e-d1ac88ad95ed}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -30,16 +30,16 @@
       <Filter>Headerdateien\utils</Filter>
     </ClInclude>
     <ClInclude Include="Ping.hpp">
-      <Filter>Quelldateien\commands</Filter>
+      <Filter>Headerdateien\commands</Filter>
     </ClInclude>
     <ClInclude Include="CommandRegister.hpp">
       <Filter>Quelldateien</Filter>
     </ClInclude>
     <ClInclude Include="Mock.hpp">
-      <Filter>Quelldateien\commands</Filter>
+      <Filter>Headerdateien\commands</Filter>
     </ClInclude>
     <ClInclude Include="HowGae.hpp">
-      <Filter>Quelldateien\commands</Filter>
+      <Filter>Headerdateien\commands</Filter>
     </ClInclude>
     <ClInclude Include="MathUtil.hpp">
       <Filter>Headerdateien\utils</Filter>
@@ -51,22 +51,25 @@
       <Filter>Headerdateien\utils</Filter>
     </ClInclude>
     <ClInclude Include="Choose.hpp">
-      <Filter>Quelldateien\commands</Filter>
+      <Filter>Headerdateien\commands</Filter>
     </ClInclude>
     <ClInclude Include="StringUtil.hpp">
       <Filter>Headerdateien\utils</Filter>
     </ClInclude>
     <ClInclude Include="PPSize.hpp">
-      <Filter>Quelldateien\commands</Filter>
+      <Filter>Headerdateien\commands</Filter>
     </ClInclude>
     <ClInclude Include="Colors.hpp">
       <Filter>Headerdateien\utils</Filter>
     </ClInclude>
     <ClInclude Include="ChromosomeCounter.hpp">
-      <Filter>Quelldateien\commands</Filter>
+      <Filter>Headerdateien\commands</Filter>
     </ClInclude>
     <ClInclude Include="CommandTemplate.hpp">
-      <Filter>Quelldateien\commands</Filter>
+      <Filter>Headerdateien\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="DiscordUtil.hpp">
+      <Filter>Headerdateien\utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

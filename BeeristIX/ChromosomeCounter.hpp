@@ -1,6 +1,9 @@
 #pragma once
-
 #include <discordcoreapi/Index.hpp>
+#include <fmt/format.h>
+
+#include "Colors.hpp"
+#include "GlobalData.hpp"
 
 namespace Beerist::Commands
 {
@@ -20,7 +23,16 @@ namespace Beerist::Commands
 
         virtual auto execute(DiscordCoreAPI::BaseFunctionArguments& args) -> void {
             DiscordCoreAPI::RespondToInputEventData dataPackage{ args.eventData };
+            std::uniform_int_distribution<> distr(45, 52);
+            DiscordCoreAPI::EmbedData msgEmbed;
 
+            msgEmbed.addField(":dna: CHROMOSOME COUNTER :dna:", fmt::format("U have {} chromosomes!", distr(gen)));
+            msgEmbed.setTimeStamp(DiscordCoreAPI::getTimeAndDate());
+            msgEmbed.setColor(DiscordCoreAPI::Colors::MoonYellow);
+            msgEmbed.setFooter("I don't know if you should be proud of this...", args.discordCoreClient->getBotUser().getAvatarUrl());
+
+            dataPackage.addMessageEmbed(msgEmbed);
+            dataPackage.setResponseType(DiscordCoreAPI::InputEventResponseType::Interaction_Response);
             DiscordCoreAPI::InputEvents::respondToInputEventAsync(dataPackage);
         }
 

@@ -3,7 +3,6 @@
 #include <fmt/format.h>
 
 #include "Colors.hpp"
-#include "MathUtil.hpp"
 
 namespace Beerist::Commands
 {
@@ -24,9 +23,9 @@ namespace Beerist::Commands
         virtual auto execute(DiscordCoreAPI::BaseFunctionArguments& args) -> void {
             DiscordCoreAPI::RespondToInputEventData dataPackage{ args.eventData };
             std::uniform_int_distribution<> distr(0, 100);
-            int val = distr(gen);
             DiscordCoreAPI::EmbedData msgEmbed;
-            msgEmbed.addField(":rainbow_flag:how gae?:rainbow_flag:", fmt::format("you are :rainbow_flag:{}% gay:rainbow_flag:", val));
+
+            msgEmbed.addField(":rainbow_flag:how gae?:rainbow_flag:", fmt::format("you are :rainbow_flag:{}% gay:rainbow_flag:", distr(gen)));
             msgEmbed.setTimeStamp(DiscordCoreAPI::getTimeAndDate());
             msgEmbed.setColor(DiscordCoreAPI::Colors::MoonYellow);
             msgEmbed.setFooter("y r u gae?", args.discordCoreClient->getBotUser().getAvatarUrl());

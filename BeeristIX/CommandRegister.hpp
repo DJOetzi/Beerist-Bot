@@ -4,3 +4,4 @@
 #include "HowGae.hpp"
 #include "Choose.hpp"
 #include "PPSize.hpp"
+#include "ChromosomeCounter.hpp"
