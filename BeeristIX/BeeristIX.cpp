@@ -81,13 +81,7 @@ auto onBoot00(DiscordCoreAPI::DiscordCoreClient* args) -> DiscordCoreAPI::CoRout
         std::this_thread::sleep_for(std::chrono::milliseconds{ 1 });
     }
 
-    std::vector<DiscordCoreAPI::CreateGuildApplicationCommandData> commands {
-        CM(Ping),
-        CM(Mock),
-        CM(HowGae),
-        CM(Choose),
-        CM(PPSize)
-    };
+    std::vector<DiscordCoreAPI::CreateGuildApplicationCommandData> commands{};
     std::vector<DiscordCoreAPI::CreateGlobalApplicationCommandData> global_commands;
 
     CR("ping", Ping, 0);
@@ -95,6 +89,7 @@ auto onBoot00(DiscordCoreAPI::DiscordCoreClient* args) -> DiscordCoreAPI::CoRout
     CR("howgae", HowGae, 2);
     CR("choose", Choose, 3);
     CR("pp-size", PPSize, 4);
+
 
     DiscordCoreAPI::BulkOverwriteGuildApplicationCommandsData dataPackage;
     dataPackage.responseData = commands;

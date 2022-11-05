@@ -62,5 +62,8 @@
     <ClInclude Include="Colors.hpp">
       <Filter>Headerdateien\utils</Filter>
     </ClInclude>
+    <ClInclude Include="ChromosomeCounter.hpp">
+      <Filter>Quelldateien\commands</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

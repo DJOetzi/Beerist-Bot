@@ -135,6 +135,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Choose.hpp" />
+    <ClInclude Include="ChromosomeCounter.hpp" />
     <ClInclude Include="Colors.hpp" />
     <ClInclude Include="CommandRegister.hpp" />
     <ClInclude Include="FileUtil.hpp" />
