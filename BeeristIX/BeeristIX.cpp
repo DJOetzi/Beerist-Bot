@@ -53,7 +53,7 @@ auto main() -> int
     clientConfig.functionsToExecute = functionVector;
 
     std::vector<DiscordCoreAPI::ActivityData> activities{
-	    Utility::Discord::buildActivity("with ur mom", DiscordCoreAPI::ActivityType::Game),
+	Utility::Discord::buildActivity("with ur mom", DiscordCoreAPI::ActivityType::Game),
         Utility::Discord::buildActivity("u taking a crap", DiscordCoreAPI::ActivityType::Watching),
         Utility::Discord::buildActivity("on LiveLeak", DiscordCoreAPI::ActivityType::Streaming),
         Utility::Discord::buildActivity("with Allah", DiscordCoreAPI::ActivityType::Competing),
